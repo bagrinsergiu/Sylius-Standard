@@ -20,7 +20,7 @@
         "php": "^7.3",
         "friendsofsymfony/oauth-server-bundle": ">2.0.0-alpha.0 ^2.0@dev",
         "bodnar1212/paypal-plugin": "2.0.2",
-        "bagrinsergiu/sylius": "2.0.0",
+        "bagrinsergiu/sylius": "2.0.1",
         "symfony/dotenv": "^4.4 || ^5.2",
         "symfony/flex": "^1.11"
     },
