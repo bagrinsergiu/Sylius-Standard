@@ -22,7 +22,8 @@ services:
             # if you develop on Linux, you may use a bind-mounted host directory instead
             # - ./public/media:/srv/sylius/public/media:rw
             - public-media:/srv/sylius/public/media:rw
-
+        restart: unless-stopped
+        
     mysql:
         image: percona:5.7
         environment:
@@ -36,7 +37,8 @@ services:
             # - ./docker/mysql/data:/var/lib/mysql:rw,delegated
         ports:
             - "33006:3306"
-
+        restart: unless-stopped
+        
     nodejs:
         build:
             context: .
@@ -53,7 +55,8 @@ services:
             - ./public:/srv/sylius/public:rw,delegated
         ports:
             - "35729:35729"
-
+        restart: unless-stopped
+        
     nginx:
         build:
             context: .
@@ -68,8 +71,9 @@ services:
             # - ./public/media:/srv/sylius/public/media:ro
             - public-media:/srv/sylius/public/media:ro,nocopy
         ports:
-            - "80:80"
-
+            - "8081:80"
+        restart: unless-stopped
+        
     mailhog:
         # do not use in production!
         image: mailhog/mailhog:latest
@@ -79,7 +83,7 @@ services:
         #   - ./docker/mailhog/maildir:/maildir:rw,delegated
         ports:
             - "8025:8025"
-
+        restart: unless-stopped
 volumes:
     mysql-data:
     public-media:
