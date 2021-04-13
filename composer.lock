@@ -4,33 +4,32 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b697aa40112082e9b1ff299928c3de8e",
+    "content-hash": "ef1782e6cf91aa21909d9a51bd4d4a4f",
     "packages": [
         {
             "name": "alcohol/iso4217",
-            "version": "3.1.5",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alcohol/iso4217.git",
-                "reference": "3a764b8d8f1d5ea7506620a21f42909a7d6a4832"
+                "reference": "b525b94311d9d081cfa41cbcd4f51983f88c809a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alcohol/iso4217/zipball/3a764b8d8f1d5ea7506620a21f42909a7d6a4832",
-                "reference": "3a764b8d8f1d5ea7506620a21f42909a7d6a4832",
+                "url": "https://api.github.com/repos/alcohol/iso4217/zipball/b525b94311d9d081cfa41cbcd4f51983f88c809a",
+                "reference": "b525b94311d9d081cfa41cbcd4f51983f88c809a",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.4 || ^7.0"
+                "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "phpunit/php-invoker": "@stable",
-                "phpunit/phpunit": "^4.8.36 || ^5.7 || ^6.5"
+                "phpunit/phpunit": "^9.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.x-dev"
+                    "dev-main": "4.x-dev"
                 }
             },
             "autoload": {
@@ -61,7 +60,7 @@
                 "issues": "https://github.com/alcohol/iso4217/issues",
                 "source": "https://github.com/alcohol/iso4217"
             },
-            "time": "2019-10-30T10:03:42+00:00"
+            "time": "2021-01-06T07:58:06+00:00"
         },
         {
             "name": "api-platform/core",
@@ -304,16 +303,16 @@
         },
         {
             "name": "bagrinsergiu/sylius",
-            "version": "2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bagrinsergiu/Sylius.git",
-                "reference": "fc5064e5a5c570d22dc48669b47d9a839957c9c3"
+                "reference": "d31a67a3122d57d3e5db5becaac610a4c96b8320"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bagrinsergiu/Sylius/zipball/fc5064e5a5c570d22dc48669b47d9a839957c9c3",
-                "reference": "fc5064e5a5c570d22dc48669b47d9a839957c9c3",
+                "url": "https://api.github.com/repos/bagrinsergiu/Sylius/zipball/d31a67a3122d57d3e5db5becaac610a4c96b8320",
+                "reference": "d31a67a3122d57d3e5db5becaac610a4c96b8320",
                 "shasum": ""
             },
             "require": {
@@ -604,9 +603,9 @@
             "description": "E-Commerce platform for PHP, based on Symfony framework.",
             "homepage": "https://sylius.com",
             "support": {
-                "source": "https://github.com/bagrinsergiu/Sylius/tree/2.0.0"
+                "source": "https://github.com/bagrinsergiu/Sylius/tree/v2.0.1"
             },
-            "time": "2021-04-09T10:10:51+00:00"
+            "time": "2021-04-12T12:19:32+00:00"
         },
         {
             "name": "behat/transliterator",
@@ -659,20 +658,20 @@
         },
         {
             "name": "bodnar1212/paypal-plugin",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bodnar1212/PayPalPlugin.git",
-                "reference": "9a48e158d408a10411f78d446e79563209ed00c3"
+                "reference": "703ceb8c08634522a3ca0d253c3a9136b3f0b81e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bodnar1212/PayPalPlugin/zipball/9a48e158d408a10411f78d446e79563209ed00c3",
-                "reference": "9a48e158d408a10411f78d446e79563209ed00c3",
+                "url": "https://api.github.com/repos/bodnar1212/PayPalPlugin/zipball/703ceb8c08634522a3ca0d253c3a9136b3f0b81e",
+                "reference": "703ceb8c08634522a3ca0d253c3a9136b3f0b81e",
                 "shasum": ""
             },
             "require": {
-                "bagrinsergiu/sylius": "2.0.0",
+                "bagrinsergiu/sylius": "2.0.*",
                 "doctrine/doctrine-migrations-bundle": "^3.0",
                 "nyholm/append-query-string": "^0.1.1",
                 "php": "^7.3",
@@ -751,9 +750,9 @@
                 "sylius-plugin"
             ],
             "support": {
-                "source": "https://github.com/bodnar1212/PayPalPlugin/tree/2.0.2"
+                "source": "https://github.com/bodnar1212/PayPalPlugin/tree/2.0.3"
             },
-            "time": "2021-04-09T11:30:18+00:00"
+            "time": "2021-04-12T15:34:40+00:00"
         },
         {
             "name": "clue/stream-filter",
@@ -1561,16 +1560,16 @@
         },
         {
             "name": "doctrine/doctrine-migrations-bundle",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineMigrationsBundle.git",
-                "reference": "d1248471734c62b94baac36cb18e9c635775eeb0"
+                "reference": "91f0a5e2356029575f3038432cc188b12f9d5da5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineMigrationsBundle/zipball/d1248471734c62b94baac36cb18e9c635775eeb0",
-                "reference": "d1248471734c62b94baac36cb18e9c635775eeb0",
+                "url": "https://api.github.com/repos/doctrine/DoctrineMigrationsBundle/zipball/91f0a5e2356029575f3038432cc188b12f9d5da5",
+                "reference": "91f0a5e2356029575f3038432cc188b12f9d5da5",
                 "shasum": ""
             },
             "require": {
@@ -1625,7 +1624,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/DoctrineMigrationsBundle/issues",
-                "source": "https://github.com/doctrine/DoctrineMigrationsBundle/tree/3.1.0"
+                "source": "https://github.com/doctrine/DoctrineMigrationsBundle/tree/3.1.1"
             },
             "funding": [
                 {
@@ -1641,7 +1640,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-05T20:45:07+00:00"
+            "time": "2021-04-10T16:48:53+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -5130,27 +5129,27 @@
         },
         {
             "name": "payum/payum",
-            "version": "1.6.1",
+            "version": "1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Payum/Payum.git",
-                "reference": "80282043bf997a419ddede960385ff66c5e03242"
+                "reference": "ffa0fb8c04967d7d1e1f8bb122f5e4123b06fe5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Payum/Payum/zipball/80282043bf997a419ddede960385ff66c5e03242",
-                "reference": "80282043bf997a419ddede960385ff66c5e03242",
+                "url": "https://api.github.com/repos/Payum/Payum/zipball/ffa0fb8c04967d7d1e1f8bb122f5e4123b06fe5e",
+                "reference": "ffa0fb8c04967d7d1e1f8bb122f5e4123b06fe5e",
                 "shasum": ""
             },
             "require": {
-                "alcohol/iso4217": "^3.1",
+                "alcohol/iso4217": "^3.1 || ^4.0",
                 "league/uri": "^6.4",
                 "league/uri-components": "^2.2",
                 "payum/iso4217": "~1.0",
                 "php": "^7.2 || ^8.0",
                 "php-http/client-implementation": "^1.0",
                 "php-http/message": "^1.0",
-                "twig/twig": "^1.34|^2.4|^3.0"
+                "twig/twig": "^1.34 || ^2.4 || ^3.0"
             },
             "conflict": {
                 "league/uri-components": "<1.7.1"
@@ -5174,12 +5173,12 @@
                 "authorizenet/authorizenet": "^1.8.1",
                 "defuse/php-encryption": "^2",
                 "doctrine/orm": "^2.5",
-                "doctrine/persistence": "^1.3.3|^2.0",
+                "doctrine/persistence": "^1.3.3 || ^2.0",
                 "ext-curl": "*",
                 "ext-pdo_sqlite": "*",
                 "ext-soap": "*",
                 "fp/klarna-invoice": "0.1.*",
-                "klarna/checkout": "^1.1|^2.0",
+                "klarna/checkout": "^1.1 || ^2.0",
                 "omnipay/common": "^3.0",
                 "omnipay/dummy": "^3.0",
                 "paypal/rest-api-sdk-php": "~1.0",
@@ -5189,15 +5188,15 @@
                 "propel/propel1": "~1.7",
                 "psr/log": "~1.0",
                 "sofort/sofortlib-php": "^3.0",
-                "stripe/stripe-php": "~2.0|~3.0",
-                "symfony/dependency-injection": "^4.4|^5.0",
-                "symfony/form": "^4.4|^5.0",
-                "symfony/http-foundation": "^4.4|^5.0",
-                "symfony/http-kernel": "^4.4|^5.0",
-                "symfony/phpunit-bridge": "^4.4|^5.0",
-                "symfony/routing": "^4.4|^5.0",
-                "symfony/templating": "^4.4|^5.0",
-                "symfony/validator": "^4.4|^5.0",
+                "stripe/stripe-php": "~2.0 || ~3.0",
+                "symfony/dependency-injection": "^4.4 || ^5.0",
+                "symfony/form": "^4.4 || ^5.0",
+                "symfony/http-foundation": "^4.4 || ^5.0",
+                "symfony/http-kernel": "^4.4 || ^5.0",
+                "symfony/phpunit-bridge": "^4.4 || ^5.0",
+                "symfony/routing": "^4.4 || ^5.0",
+                "symfony/templating": "^4.4 || ^5.0",
+                "symfony/validator": "^4.4 || ^5.0",
                 "zendframework/zend-db": "~2"
             },
             "type": "library",
@@ -5253,56 +5252,58 @@
             ],
             "support": {
                 "issues": "https://github.com/Payum/Payum/issues",
-                "source": "https://github.com/Payum/Payum/tree/1.6.1"
+                "source": "https://github.com/Payum/Payum/tree/1.6.2"
             },
-            "time": "2021-01-06T17:20:15+00:00"
+            "time": "2021-04-10T07:19:51+00:00"
         },
         {
             "name": "payum/payum-bundle",
-            "version": "2.4.1",
+            "version": "2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Payum/PayumBundle.git",
-                "reference": "08416446c546d3aca218b91b237c2a25d147afbc"
+                "reference": "7cc019c32ebc7d1b0f574e8dbff8dc4ea832fedb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Payum/PayumBundle/zipball/08416446c546d3aca218b91b237c2a25d147afbc",
-                "reference": "08416446c546d3aca218b91b237c2a25d147afbc",
+                "url": "https://api.github.com/repos/Payum/PayumBundle/zipball/7cc019c32ebc7d1b0f574e8dbff8dc4ea832fedb",
+                "reference": "7cc019c32ebc7d1b0f574e8dbff8dc4ea832fedb",
                 "shasum": ""
             },
             "require": {
-                "payum/core": "^1.5",
-                "php": "^7.1.3",
-                "symfony/form": "^4.4|^5",
-                "symfony/framework-bundle": "^4.4|^5",
-                "symfony/security-csrf": "^4.4|^5",
-                "symfony/validator": "^4.4|^5"
+                "payum/core": "^1.6",
+                "php": "^7.2 || ^8.0",
+                "symfony/form": "^4.4 || ^5.0",
+                "symfony/framework-bundle": "^4.4 || ^5.0",
+                "symfony/security-csrf": "^4.4 | ^5.0",
+                "symfony/validator": "^4.4 || ^5.0"
             },
             "require-dev": {
                 "defuse/php-encryption": "^2",
+                "doctrine/annotations": "^1.9",
                 "doctrine/orm": "~2.5",
                 "ext-curl": "*",
                 "ext-pdo_sqlite": "*",
                 "ext-soap": "*",
                 "fp/klarna-invoice": "0.1.*",
                 "klarna/checkout": "~1|~2.0",
+                "league/uri-schemes": "^1.1",
                 "omnipay/common": "^3@dev",
                 "omnipay/dummy": "^3@alpha",
                 "omnipay/paypal": "^3@dev",
                 "paypal/rest-api-sdk-php": "0.5.*",
                 "payum/omnipay-v3-bridge": "^1@alpha",
-                "payum/payum": "^1.5@dev",
-                "php-http/guzzle6-adapter": "^1",
-                "phpunit/phpunit": "^7.5",
+                "payum/payum": "^1.6",
+                "php-http/guzzle6-adapter": "1.1.1",
+                "phpunit/phpunit": "^7.5 || ^8.5",
                 "stripe/stripe-php": "~1.0",
-                "symfony/browser-kit": "^4.4|^5",
-                "symfony/expression-language": "^4.4|^5",
-                "symfony/phpunit-bridge": "^4.4|^5",
-                "symfony/templating": "^4.4|^5",
+                "symfony/browser-kit": "^4.4 || ^5.0",
+                "symfony/expression-language": "^4.4 || ^5.0",
+                "symfony/phpunit-bridge": "^4.4 || ^5.0",
+                "symfony/templating": "^4.4 || ^5.0",
                 "symfony/twig-bundle": "^4.4|^5",
-                "symfony/yaml": "^4.4|^5",
-                "twig/twig": "^1.16|^2.0"
+                "symfony/yaml": "^4.4 || ^5.0 ",
+                "twig/twig": "^1.16 || ^2.0 || ^3.0"
             },
             "suggest": {
                 "sonata-project/admin-bundle": "^3 If you want to configure payments in the backend."
@@ -5310,7 +5311,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -5358,9 +5359,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Payum/PayumBundle/issues",
-                "source": "https://github.com/Payum/PayumBundle/tree/2.4.1"
+                "source": "https://github.com/Payum/PayumBundle/tree/2.4.2"
             },
-            "time": "2020-02-11T19:51:20+00:00"
+            "time": "2021-04-01T09:18:10+00:00"
         },
         {
             "name": "php-http/guzzle6-adapter",
