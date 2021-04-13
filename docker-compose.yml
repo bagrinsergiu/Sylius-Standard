@@ -5,6 +5,7 @@ services:
         build:
             context: .
             target: sylius_php
+        image: public.ecr.aws/n7j9k3k1/brizy-sylius:latest    
         depends_on:
             - mysql
         environment:
