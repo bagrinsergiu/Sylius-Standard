@@ -26,7 +26,7 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "lawliet5130/paypal-plugin": "^2.0",
-        "bagrinsergiu/sylius": "2.1.1",
+        "bagrinsergiu/sylius": "2.1.2",
         "symfony/dotenv": "^4.4 || ^5.2",
         "symfony/flex": "^1.11"
     },
