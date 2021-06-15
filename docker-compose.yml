@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
     php:
-        image: public.ecr.aws/n7j9k3k1/sylius-php
+        image: brizy-sylius-test
         depends_on:
             - mysql
         environment:
@@ -24,11 +24,11 @@ services:
             - mysql-data:/var/lib/mysql:rw
         restart: unless-stopped
 
-    nginx:
-        image: public.ecr.aws/n7j9k3k1/sylius-nginx
-        depends_on:
-            - php
-        restart: unless-stopped
+#    nginx:
+#        image: public.ecr.aws/n7j9k3k1/sylius-nginx
+#        depends_on:
+#            - php
+#        restart: unless-stopped
 
 volumes:
     mysql-data:

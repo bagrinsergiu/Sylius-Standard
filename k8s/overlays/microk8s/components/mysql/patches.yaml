@@ -1,0 +1,23 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: sylius-mysql-pv
+spec:
+  storageClassName: ""
+  claimRef:
+    name: sylius-mysql-pv-claim
+    namespace: default
+  capacity:
+    storage: 5Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: sylius-mysql-pv-claim
+spec:
+  storageClassName: ""
+  volumeName: sylius-mysql-pv
+  resources:
+    requests:
+      storage: 5Gi

@@ -1,0 +1,12 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sylius-deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: sylius
+          image: public.ecr.aws/n7j9k3k1/sylius:latest
+

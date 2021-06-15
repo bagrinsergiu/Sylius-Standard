@@ -1,0 +1,7 @@
+commonLabels:
+  project: sylius
+resources:
+  - secrets.yaml
+  - configs.yaml
+  - deployments.yaml
+  - services.yaml

@@ -1,0 +1,4 @@
+commonLabels:
+  project: sylius
+resources:
+  - volumes.yaml

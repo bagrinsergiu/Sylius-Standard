@@ -1,0 +1,6 @@
+commonLabels:
+  project: sylius
+resources:
+  - deployments.yaml
+  - services.yaml
+  - volumes.yaml
