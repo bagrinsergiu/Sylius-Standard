@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sylius-ingress
+spec:
+  rules:
+    - host: "sylius.office.brizy.org"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: sylius
+                port:
+                  number: 80

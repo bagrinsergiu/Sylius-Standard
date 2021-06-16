@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sylius
+spec:
+  type: ClusterIP
+  selector:
+    app: sylius
+  ports:
+    - port: 80
+      targetPort: 80

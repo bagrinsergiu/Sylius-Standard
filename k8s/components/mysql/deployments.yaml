@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sylius-mysql-deployment
+spec:
+  selector:
+    matchLabels:
+      app: &label-app sylius-mysql
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: *label-app
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:5.7
+        env:
+        - name: MYSQL_DATABASE
+          value: sylius
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: sylius-secret
+              key: mysql-root-password
+        ports:
+        - name: mysql
+          containerPort: 3306
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: sylius-mysql-pv-claim

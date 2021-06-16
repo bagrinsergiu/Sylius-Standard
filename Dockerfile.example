@@ -1,4 +1,9 @@
+# the different stages of this Dockerfile are meant to be built into separate images
+# https://docs.docker.com/compose/compose-file/#target
+
 ARG PHP_VERSION=7.4
+ARG NODE_VERSION=10
+ARG NGINX_VERSION=1.16
 
 FROM php:${PHP_VERSION}-fpm AS sylius_php
 
@@ -14,10 +19,6 @@ RUN apt-get update \
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY docker/php/php.ini /usr/local/etc/php/php.ini
 COPY docker/php/php-cli.ini /usr/local/etc/php/php-cli.ini
-
-#nginx
-COPY docker/nginx/conf.d/default.conf /etc/nginx/conf.d/
-RUN rm -rf /etc/nginx/sites-enabled/*
 
 # https://getcomposer.org/doc/03-cli.md#composer-allow-superuser
 ENV COMPOSER_ALLOW_SUPERUSER=1
@@ -56,11 +57,53 @@ VOLUME /srv/sylius/var
 
 VOLUME /srv/sylius/public/media
 
-#copy generated assets
-COPY --from=sylius_php /srv/sylius/public public/
-
 COPY docker/php/docker-entrypoint.sh /usr/local/bin/docker-entrypoint
 RUN chmod +x /usr/local/bin/docker-entrypoint
 
 ENTRYPOINT ["docker-entrypoint"]
 CMD ["php-fpm"]
+
+FROM node:${NODE_VERSION}-alpine AS sylius_nodejs
+
+WORKDIR /srv/sylius
+
+RUN set -eux; \
+	apk add --no-cache --virtual .build-deps \
+		g++ \
+		gcc \
+		git \
+		make \
+		python \
+	;
+
+# prevent the reinstallation of vendors at every changes in the source code
+COPY package.json yarn.lock ./
+RUN set -eux; \
+	yarn install; \
+	yarn cache clean
+
+COPY --from=sylius_php /srv/sylius/vendor/bagrinsergiu/sylius/src/Sylius/Bundle/UiBundle/Resources/private vendor/bagrinsergiu/sylius/src/Sylius/Bundle/UiBundle/Resources/private/
+COPY --from=sylius_php /srv/sylius/vendor/bagrinsergiu/sylius/src/Sylius/Bundle/AdminBundle/Resources/private vendor/bagrinsergiu/sylius/src/Sylius/Bundle/AdminBundle/Resources/private/
+COPY --from=sylius_php /srv/sylius/vendor/bagrinsergiu/sylius/src/Sylius/Bundle/ShopBundle/Resources/private vendor/bagrinsergiu/sylius/src/Sylius/Bundle/ShopBundle/Resources/private/
+
+COPY --from=sylius_php /srv/sylius/vendor/bagrinsergiu/sylius/src/Sylius/Bundle/AdminBundle/gulpfile.babel.js vendor/bagrinsergiu/sylius/src/Sylius/Bundle/AdminBundle/gulpfile.babel.js
+COPY --from=sylius_php /srv/sylius/vendor/bagrinsergiu/sylius/src/Sylius/Bundle/ShopBundle/gulpfile.babel.js vendor/bagrinsergiu/sylius/src/Sylius/Bundle/ShopBundle/gulpfile.babel.js
+
+COPY gulpfile.babel.js .babelrc ./
+RUN set -eux; \
+	GULP_ENV=prod yarn build
+
+COPY docker/nodejs/docker-entrypoint.sh /usr/local/bin/docker-entrypoint
+RUN chmod +x /usr/local/bin/docker-entrypoint
+
+ENTRYPOINT ["docker-entrypoint"]
+CMD ["yarn", "watch"]
+
+FROM nginx:${NGINX_VERSION}-alpine AS sylius_nginx
+
+COPY docker/nginx/conf.d/default.conf /etc/nginx/conf.d/
+
+WORKDIR /srv/sylius
+
+COPY --from=sylius_php /srv/sylius/public public/
+COPY --from=sylius_nodejs /srv/sylius/public public/

@@ -1,0 +1,17 @@
+commonLabels:
+  project: sylius
+  env: prod
+bases:
+  - ../../base
+  - ./base
+
+  - ../../components/mysql
+  - ./components/mysql
+
+patches:
+  - ./components/mysql/patches.yaml
+
+  - ingress.patch.yaml
+  - secrets.patch.yaml
+  - configs.patch.yaml
+  - deployments.patch.yaml
