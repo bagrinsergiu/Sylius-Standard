@@ -25,8 +25,8 @@
     ],
     "require": {
         "php": "^7.4 || ^8.0",
-        "lawliet5130/paypal-plugin": "^2.0",
-        "bagrinsergiu/sylius": "2.1.2",
+        "bagrinsergiu/paypal-plugin": "^2.0",
+        "bagrinsergiu/sylius": "2.1.3",
         "symfony/dotenv": "^4.4 || ^5.2",
         "symfony/flex": "^1.11"
     },
@@ -111,7 +111,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/lawliet5130/PayPalPlugin.git"
+            "url": "https://github.com/bagrinsergiu/PayPalPlugin.git"
         }
     ]
 }
